@@ -1,8 +1,8 @@
 export interface IProduct {
-    _id?:Number,
-    name:String | null | undefined,
-    price:Number | null | undefined,
-    description:String
-    category:String
-    img?:String
+  _id?: Number;
+  name: String;
+  price: Number;
+  desc: String;
+  cate: Number;
+  img?: String;
 }
