@@ -8,18 +8,5 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
- products : IProduct [] = []
 
- constructor (private productService: ProductService){
-  this.productService.getProducts().subscribe((data)=> {
-    this.products = data
-    console.log(data);
-    
-  })
- }
- removeItem(id: any){
-  this.productService.deleteProduct(id).subscribe(()=> {
-    this.products = this.products.filter(item => item._id != id)
-  })
- }
 }
