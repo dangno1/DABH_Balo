@@ -1,0 +1,29 @@
+<div class="container">
+    <h1 class="text-center">Quản lý sản phẩm</h1>
+    <!-- <input type="text" (input) ="getValue($event)"/> -->
+    <hr />
+    <a class="btn btn-success w-[100px] p-2 mb-2" routerLink="/admin/products/add">add</a>
+    <table class="table table-bordered border border-dark">
+      <thead>
+        <tr>
+          <th class="text-center">#</th>
+          <th class="text-center">image</th>
+          <th class="text-center">Name</th>
+          <th class="text-center">Price</th> 
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+            <td class="text-center">{{ product._id }}</td>
+            <td><img class="ml-[115px]" width="100px"  src="{{ product.img }}" /></td>
+            <td class="text-center">{{ product.name }}</td>
+            <td class="text-center">{{ product.price }}</td>
+            <td>
+                <button class="btn btn-danger ml-8" >Delete</button>
+                <a class="btn btn-success  ml-3" ><button>Update</button></a>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
