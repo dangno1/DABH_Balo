@@ -23,6 +23,6 @@ export class ProductService {
     return this.http.post<IProduct>('http://localhost:8088/api/add', product)
   }
   updateProduct(product:IProduct): Observable<IProduct>{
-    return this.http.put<IProduct>(`http://localhost:8088/api/update/${product._id}`,product)
+    return this.http.patch<IProduct>(`http://localhost:8088/api/update/${product._id}`,product)
   }
 }
