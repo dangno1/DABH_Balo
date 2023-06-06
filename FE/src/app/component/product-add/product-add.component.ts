@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { Route } from '@angular/router';
 import { IProduct } from 'src/app/interface/product';
 import { ProductService } from 'src/app/service/product.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-product-add',
   templateUrl: './product-add.component.html',
   styleUrls: ['./product-add.component.css'],
 })
 export class ProductAddComponent {
-  constructor(private fb: FormBuilder, private ps: ProductService) {}
+  constructor(private fb: FormBuilder, private ps: ProductService, private router: Router) {}
   productForm = this.fb.group({
     name: [''],
     price: [0],
@@ -25,7 +27,9 @@ export class ProductAddComponent {
       cate: this.productForm.value.cate || 0,
     };
     this.ps.addProduct(product).subscribe((data) => {
+      return this.router.navigate(['/admin/productList']);
       console.log(data);
+      
     });
   }
 }
