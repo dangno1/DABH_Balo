@@ -5,6 +5,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { SigninComponent } from './pages/signin/signin.component';
 import { SignupComponent } from './pages/signup/signup.component';
+import { ProductAddComponent } from './component/product-add/product-add.component';
 
 const routes: Routes = [
   {path: "", component: HomePageComponent},
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path: "sigin", component: SigninComponent},
   {path: 'sigup', component: SignupComponent},
   {path : "admin/productList", component : ProductListComponent},
+  {path : "admin/add", component : ProductAddComponent},
 ];
 
 @NgModule({
