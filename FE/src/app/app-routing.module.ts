@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: "sigin", component: SigninComponent},
   {path: 'sigup', component: SignupComponent},
   {path : "admin/productList", component : ProductListComponent},
-  {path : "admin/produdctEdit/:id", component : ProductUpdateComponent},
+  {path : "admin/productList/produdctEdit/:id", component : ProductUpdateComponent},
 
 ];
 
