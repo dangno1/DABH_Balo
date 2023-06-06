@@ -1,27 +1,27 @@
-<div class="max-w-screen-2xl m-auto grid grid-cols-[200px_1fr_250px_150px] gap-7 p-5">
+<div class="max-w-screen-2xl m-auto grid grid-cols-[200px_1fr_250px_150px] gap-7 pt-4">
     <div>
-        <img src="../../../assets/img/logo.png" alt="" width="200px">
+        <img class="pt-2" src="../../../assets/img/logo.png" alt="" width="200px">
     </div>
     <div>
         <form action="https://www.vascara.com/product/search">
             <input class="w-full px-16 pt-3 pb-3 rounded-s-3xl border italic text-xl" type="search"
                 placeholder="Search">
-            <button class="rounded-e-3xl text-xl italic" type="submit">Search</button>
+            <button class="rounded-e-3xl text-xl italic hover:bg-cyan-500 bg-red-500" type="submit">Search</button>
         </form>
     </div>
-    <div class="flex italic text-xl pt-2 text-center pl-4">
-        <a class="hover:text-pink-400 text-slate-400 pr-1" href="#">Đăng Ký</a>
+    <div class="flex italic text-xl pt-3 text-center pl-4">
+        <a class="hover:text-pink-400 text-slate-400 pr-1" href="/sigup">Đăng Ký</a>
         <p class="text-slate-400"> / </p>
-        <a class="hover:text-pink-400 text-slate-400 pl-1" href="#">Đăng Nhập</a>
+        <a class="hover:text-pink-400 text-slate-400 pl-1" href="/sigin">Đăng Nhập</a>
     </div>
-    <div class="flex italic text-xl pt-2">
+    <div class="flex italic text-xl pt-3">
         <i class="fa-solid fa-cart-shopping text-slate-500 text-2xl hover:text-pink-500"></i>
         <p class="text-slate-400 pl-1 hover:text-pink-500">Giỏ Hàng</p>
     </div>
 </div>
-<div class="max-w-screen-2xl m-auto pt-5 pb-4">
+<div class="max-w-screen-2xl m-auto pt-5">
     <ul>
-        <li class="inline-block	pl-5 italic hover:text-pink-500 text-lg text-slate-500">GIÀY</li>
+        <li class="inline-block	 italic hover:text-pink-500 text-lg text-slate-500">GIÀY</li>
         <li class="inline-block	pl-16 italic hover:text-pink-500 text-lg text-slate-500">TÚI XÁCH</li>
         <li class="inline-block	pl-16 italic hover:text-pink-500 text-lg text-slate-500">BALO</li>
         <li class="inline-block	pl-16 italic hover:text-pink-500 text-lg text-slate-500">VÍ BÓP</li>
@@ -30,7 +30,7 @@
     </ul>
 </div>
 <hr>
-<div class="max-w-screen-2xl m-auto pt-5">
+<div class="max-w-screen-2xl m-auto pt-1">
     <p class="pl-5 text-lg text-slate-500">Trang chủ - BaLo</p>
 </div>
 <div class="max-w-screen-2xl m-auto pt-5 grid grid-cols-2">
@@ -42,7 +42,7 @@
         </div>
     </div>
     <div class="pl-5">
-        <!-- <p class="text-3xl pb-7 italic">{{ product.name }}</p> -->
+        <p class="text-3xl pb-7 italic">{{ product.name }} - BALO CASUAL PHỐI MÀU TƯƠI TRẺ - BAC 0188 - MÀU XANH BẠC HÀ</p>
         <hr>
         <div class="border rounded-xl">
             <p class="text-center pb-3 text-xl italic">THONG TIN CHI TIET</p>
@@ -75,7 +75,7 @@
         </div>
         <hr>
         <div class="pb-6">
-            <!-- <span class="text-3xl text-pink-500">{{ product.price }}$</span> -->
+            <span class="text-3xl text-pink-500">{{ product.price }}$</span>
             <p class="pt-4 text-xl italic pb-5">Số lượng</p>
             <button class="border w-7 h-7 text-base">-</button>
             <button class="border w-9 h-7 text-sm">1</button>
@@ -102,7 +102,7 @@
         </div>
     </div>
 </div>
-
+<hr>
 <div class="max-w-screen-2xl m-auto pt-7 text-center">
     <ul>
         <li class="inline-block pl-5 text-lg text-slate-500">CUA HANG</li>

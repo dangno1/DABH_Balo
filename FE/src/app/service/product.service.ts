@@ -13,10 +13,10 @@ export class ProductService {
   getProducts(): Observable<IProduct[]>{
     return this.http.get<IProduct[]>('http://localhost:8088/api/show')
   }
-  getProduct(id: number | string | null): Observable<IProduct> {
-    return this.http.get<IProduct>('http://localhost:8088/api/showProdctDetail/' + id);
+  getProduct(id: any): Observable<IProduct> {
+    return this.http.get<IProduct>('http://localhost:8088/api/showProductDetail/' + id);
   }
-  deleteProduct(id: number | string): Observable<IProduct> {
+  deleteProduct(id: any): Observable<IProduct> {
     return this.http.delete<IProduct>('http://localhost:8088/api/delete/' + id);
   }
   addProduct(product: IProduct): Observable<IProduct>{
