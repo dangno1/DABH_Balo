@@ -6,17 +6,18 @@
     <table class="table table-bordered border border-dark">
       <thead>
         <tr>
+          
           <th class="text-center">#</th>
-          <th class="text-center">image</th>
+          <th class="text-center w-52">image</th>
           <th class="text-center">Name</th>
           <th class="text-center">Price</th> 
-          <th></th>
+          <th class="w-[300px] text-center">action</th>
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let product of products">
-            <td class="text-center">{{ product._id }}</td>
-            <td><img class="ml-[115px]" width="100px"  src="{{ product.img }}" /></td>
+        <tr *ngFor="let product of products ; let i = index">
+            <td class="text-center">{{ i +1}}</td>
+            <td><img class="w-[200px] h-[190px]" src="{{ product.img }}" /></td>
             <td class="text-center">{{ product.name }}</td>
             <td class="text-center">{{ product.price }}</td>
             <td>
