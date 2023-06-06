@@ -1,1 +1,10 @@
-<p>signin works!</p>
+<form (ngSubmit)="signin()" [formGroup]="userForm">
+    <div>
+        <input class="border" type="text" placeholder="Email" formControlName="email">
+    </div>
+    <div>
+        <input class="border" type="password" placeholder="Password" formControlName="password">
+    </div>
+    <button title="submit">Signin</button>
+</form>
+
