@@ -5,27 +5,27 @@ import { ProductService } from 'src/app/service/product.service';
 @Component({
   selector: 'app-product-add',
   templateUrl: './product-add.component.html',
-  styleUrls: ['./product-add.component.css']
+  styleUrls: ['./product-add.component.css'],
 })
 export class ProductAddComponent {
   constructor(private fb: FormBuilder, private ps: ProductService) {}
   productForm = this.fb.group({
     name: [''],
     price: [0],
-    description: [''],
+    desc: [''],
     img: [''],
-    category: [''],
-  })
-  addProduct(){
+    cate: [0],
+  });
+  addProduct() {
     const product: IProduct = {
       name: this.productForm.value.name || '',
       price: this.productForm.value.price || 0,
-      description: this.productForm.value.description || '',
+      desc: this.productForm.value.desc || '',
       img: this.productForm.value.img || '',
-      category: this.productForm.value.category || '',
-    }
-    this.ps.addProduct(product).subscribe((data)=>{
+      cate: this.productForm.value.cate || 0,
+    };
+    this.ps.addProduct(product).subscribe((data) => {
       console.log(data);
-    }
-    )}
+    });
+  }
 }
