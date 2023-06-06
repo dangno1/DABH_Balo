@@ -21,7 +21,7 @@
             <td class="text-center">{{ product.name }}</td>
             <td class="text-center">{{ product.price }}</td>
             <td>
-                <button class="btn btn-danger ml-8" >Delete</button>
+                <button class="btn btn-danger ml-8" (click)="removeItem(product._id)">Delete</button>
                 <a class="btn btn-success  ml-3" ><button>Update</button></a>
             </td>
         </tr>

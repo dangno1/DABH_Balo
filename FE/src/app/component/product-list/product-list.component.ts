@@ -16,5 +16,10 @@ export class ProductListComponent {
 
     })
   }
+  removeItem(id: any){
+    this.productService.deleteProduct(id).subscribe(()=> {
+      this.products = this.products.filter(item => item._id != id)
+    })
+   }
 
 }
