@@ -7,9 +7,7 @@ import { ProductService } from 'src/app/service/product.service';
   styleUrls: ['./home-page.component.css'],
 })
 export class HomePageComponent {
-  // products: IProduct[] = [];
-  // searchTerm: string = '';
-
+ 
   products: IProduct[] = [];
   filteredProducts: IProduct[] = [];
   searchTerm: string = '';
@@ -21,17 +19,6 @@ export class HomePageComponent {
     // });
   }
 
-  // searchProduct() {
-  //   this.productService.search(this.searchTerm).subscribe(
-  //     (products: IProduct[]) => {
-  //       this.products = products;
-  //     },
-  //     (error: any) => {
-  //       console.log(error);
-  //     }
-  //   );
-  // }
-  
   ngOnInit(): void {
     this.productService.getProducts().subscribe(products => {
       this.products = products;
