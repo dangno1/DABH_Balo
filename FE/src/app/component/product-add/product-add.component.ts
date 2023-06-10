@@ -27,8 +27,15 @@ export class ProductAddComponent {
       cate: this.productForm.value.cate || 0,
     };
     this.ps.addProduct(product).subscribe((data) => {
-      return this.router.navigate(['/admin/productList']);
-      console.log(data);
+      if(data.success) {
+        return this.router.navigate(['/admin/productList']);
+      } else {
+        const message1 = document.getElementById('message');
+        if(message1 != null) {
+          message1.innerText = data.message;
+        }
+        return false;
+      }
       
     });
   }

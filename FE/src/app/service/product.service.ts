@@ -12,24 +12,25 @@ export class ProductService {
   getProducts(): Observable<IProduct[]> {
     return this.http.get<IProduct[]>('http://localhost:8088/api/show');
   }
+  
   getProduct(id: any): Observable<IProduct> {
     return this.http.get<IProduct>(
       'http://localhost:8088/api/showProductDetail/' + id
     );
   }
+  
   deleteProduct(id: any): Observable<IProduct> {
     return this.http.delete<IProduct>('http://localhost:8088/api/delete/' + id);
   }
-  addProduct(product: IProduct): Observable<IProduct> {
-    return this.http.post<IProduct>('http://localhost:8088/api/add', product);
+  
+  addProduct(product: IProduct): Observable<any>{
+    return this.http.post<any>('http://localhost:8088/api/add', product)
   }
-  updateProduct(product: IProduct): Observable<IProduct> {
-    return this.http.patch<IProduct>(
-      `http://localhost:8088/api/update/${product._id}`,
-      product
-    );
+  
+  updateProduct(product:IProduct): Observable<any>{
+    return this.http.patch<any>(`http://localhost:8088/api/update/${product._id}`,product)
   }
-
+  
   search(term: string): Observable<IProduct[]> {
     if (!term.trim()) {
       return this.getProducts();
@@ -37,4 +38,5 @@ export class ProductService {
     const url = `https://localhost:8088/api/search?name_like=${term}`;
     return this.http.get<IProduct[]>(url);
   }
+  
 }
