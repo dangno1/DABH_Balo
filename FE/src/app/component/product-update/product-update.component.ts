@@ -51,9 +51,15 @@ export class ProductUpdateComponent {
       img: this.productForm.value.img || '',
     };
     this.productService.updateProduct(product).subscribe((data) => {
-      return this.router.navigate(['admin/productList']),
-      console.log(data);
+      if(data.success) {
+        return this.router.navigate(['admin/productList']);
+      } else {
+        const message1 = document.getElementById('message');
+        if(message1 != null) {
+          message1.innerText = data.message;
+        }
+        return false;
+      }
     });
-    return 
   }
 }

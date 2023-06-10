@@ -6,67 +6,41 @@
       </div>
 
       <div class="rounded-lg bg-white p-8 shadow-lg lg:col-span-3 lg:p-12">
-        <form
-          [formGroup]="productForm"
-          (ngSubmit)="onHandleEdit()"
-          class="space-y-4"
-        >
+        <form [formGroup]="productForm" (ngSubmit)="onHandleEdit()" class="space-y-4">
           <div>
             <label class="sr-only">Name</label>
-            <input
-              class="w-full rounded-lg border-gray-200 p-3 text-sm"
-              placeholder="Name"
-              type="text"
-              formControlName="name"
-            />
+            <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Name" type="text"
+              formControlName="name" />
           </div>
 
           <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <div>
               <label class="sr-only">Price</label>
-              <input
-                class="w-full rounded-lg border-gray-200 p-3 text-sm"
-                placeholder="Price"
-                type="number"
-                formControlName="price"
-              />
+              <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Price" type="number"
+                formControlName="price" />
             </div>
 
             <div>
               <label class="sr-only">Description</label>
-              <input
-                class="w-full rounded-lg border-gray-200 p-3 text-sm"
-                placeholder="Description"
-                type="text"
-                formControlName="desc"
-              />
+              <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Description" type="text"
+                formControlName="desc" />
             </div>
 
             <div>
               <label class="sr-only">Image</label>
-              <input
-                class="w-full rounded-lg border-gray-200 p-3 text-sm"
-                placeholder="Image"
-                type="url"
-                formControlName="img"
-              />
+              <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Image" type="url"
+                formControlName="img" />
             </div>
             <div>
               <label class="sr-only">Categories</label>
-              <input
-                class="w-full rounded-lg border-gray-200 p-3 text-sm"
-                placeholder="Categories"
-                type="number"
-                formControlName="cate"
-              />
+              <input class="w-full rounded-lg border-gray-200 p-3 text-sm" placeholder="Categories" type="number"
+                formControlName="cate" />
             </div>
           </div>
-
+          <p class="text-red-500 text-xs" id="message"></p>
           <div class="mt-4">
-            <button
-              type="submit"
-              class="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto"
-            >
+            <button type="submit"
+              class="inline-block w-full rounded-lg bg-black px-5 py-3 font-medium text-white sm:w-auto">
               Save
             </button>
           </div>

@@ -19,10 +19,10 @@ export class ProductService {
   deleteProduct(id: any): Observable<IProduct> {
     return this.http.delete<IProduct>('http://localhost:8088/api/delete/' + id);
   }
-  addProduct(product: IProduct): Observable<IProduct>{
-    return this.http.post<IProduct>('http://localhost:8088/api/add', product)
+  addProduct(product: IProduct): Observable<any>{
+    return this.http.post<any>('http://localhost:8088/api/add', product)
   }
-  updateProduct(product:IProduct): Observable<IProduct>{
-    return this.http.patch<IProduct>(`http://localhost:8088/api/update/${product._id}`,product)
+  updateProduct(product:IProduct): Observable<any>{
+    return this.http.patch<any>(`http://localhost:8088/api/update/${product._id}`,product)
   }
 }
