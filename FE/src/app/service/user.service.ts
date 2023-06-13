@@ -13,8 +13,8 @@ export class UserService {
     return this.http.get<IUser[]>('http://localhost:8088/api/showUser')
   }
 
-  getUserByEmail(user: IUser): Observable<IUser[]>{
-    return this.http.post<IUser[]>('http://localhost:8088/api/getUserByEmail',user)
+  getUserByEmail(user: IUser): Observable<any>{
+    return this.http.post<any>('http://localhost:8088/api/getUserByEmail',user)
   }
 
   signIn(user: IUser): Observable<IUser[]>{

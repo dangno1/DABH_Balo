@@ -7,7 +7,7 @@ import { UserService } from 'src/app/service/user.service';
 @Component({
   selector: 'app-signin',
   templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.css']
+  styleUrls: ['./signin.component.css'],
 })
 export class SigninComponent {
   user: IUser[] = [];
@@ -40,16 +40,21 @@ export class SigninComponent {
       };
       this.userService.getUserByEmail(userNew).subscribe((data) => {
         console.log(data);
-        
-        data.map((item) => {
-          if (item.role == '1') {
-            this.router.navigate(['/admin/productList']);
-            // alert("admin")
-          } else if(item.role == '2') {
-            this.router.navigate(['']);
-            // alert("user")
+
+        if (!data.success) {
+          const message1 = document.getElementById('message');
+          if (message1 != null) {
+            message1.innerText = data.message;
           }
-        });
+          return false;
+        } else {
+          if (data.data.role == '1') {
+            this.router.navigate(['/admin/productList']);
+          } else if (data.data.role == '2') {
+            this.router.navigate(['']);
+          }
+          return true;
+        }
       });
     }
   }
