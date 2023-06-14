@@ -17,9 +17,11 @@ export class ProductListComponent {
     })
   }
   removeItem(id: any){
-    this.productService.deleteProduct(id).subscribe(()=> {
-      this.products = this.products.filter(item => item._id != id)
-    })
+    if (confirm("Ban co muon xoa khong")) {
+      this.productService.deleteProduct(id).subscribe(()=> {
+        this.products = this.products.filter(item => item._id != id)
+      })
+    }
    }
 
 }
